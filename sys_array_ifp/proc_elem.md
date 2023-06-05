@@ -42,3 +42,5 @@ The PE module performs the multiplication and addition operations on the input v
 
 ![Screenshot 2023-05-26 122352](https://github.com/adar-sh/internship/assets/82313948/2c0e8355-db40-475b-b0da-0a777473569f)
 
+![image](https://github.com/adar-sh/internship/assets/82313948/f35bdcf9-d3fb-4810-96ae-684a0cc8792d)
+
