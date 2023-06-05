@@ -26,3 +26,5 @@ Here's a breakdown of the module:
   - An `always` block is used to control the `done` signal and the `count` register based on the clock and reset signals. When the reset signal is active (`rst`), the `done` signal is set to 0 and the `count` register is reset to 0. Otherwise, on the positive edge of the clock signal (`posedge clk`), the `count` is incremented by 1 until it reaches 9. Once the count reaches 9, the `done` signal is set to 1 and the `count` is reset to 0.
 
 Overall, this systolic array module performs parallel computations using interconnected PEs and produces a `done` signal to indicate the completion of the computation after a certain number of clock cycles.
+
+![3-s2 0-B9780127345307500088-f08-22-9780127345307](https://github.com/adar-sh/internship/assets/82313948/f7c23314-4e3a-4e84-ac61-db3c6f688282)
