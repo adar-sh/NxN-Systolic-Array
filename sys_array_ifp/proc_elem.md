@@ -1,4 +1,6 @@
-The code represents a processing element (PE) module that performs computations on two input values `inp_n` and `inp_w`. The PE module uses a floating-point multiplier (`floating_multi`) and a floating-point adder (`float_adder`) to perform the computations. The module also includes a flip-flop (`d_ff`) to store the intermediate result.
+# Processing Element 
+
+Processing element (PE) module performs computations on two input values `inp_n` and `inp_w`. The PE module uses a floating-point multiplier (`floating_multi`) and a floating-point adder (`float_adder`) to perform the computations. The module also includes a flip-flop (`d_ff`) to store the intermediate result.
 
 Here's a breakdown of the module:
 
