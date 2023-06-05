@@ -40,4 +40,5 @@ Here's a breakdown of the module:
 
 The PE module performs the multiplication and addition operations on the input values `inp_n` and `inp_w` using the specified floating-point multiplier and adder. The intermediate results are stored in flip-flops, and the final result is available on the `out` output signal.
 
-[{:entity-type :block, :coords {:y-start -0.020294450801364387, :x-start 0.3779060006182722, :x-end 1.0054314731155842, :y-end 1.019866168456475}, :original-aspect-ratio? true, :media-asset-ids #{#uuid "49bb762d-4aab-48f7-8e90-1c05f816fd98"}, :image-aspect-ratio 1.0725274725274725, :id #uuid "2228b019-70eb-4ef3-9c38-874c9ce00f0f", :url "https://pitch-assets-ccb95893-de3f-4266-973c-20049231b248.s3.eu-west-1.amazonaws.com/49bb762d-4aab-48f7-8e90-1c05f816fd98?pitch-bytes=10634&pitch-content-type=image%2Fpng", :block-type :image, :image-scale-x 1, :locked-aspect-ratio? false, :created-at 1685679198257}]
+![Screenshot 2023-05-26 122352](https://github.com/adar-sh/internship/assets/82313948/2c0e8355-db40-475b-b0da-0a777473569f)
+
