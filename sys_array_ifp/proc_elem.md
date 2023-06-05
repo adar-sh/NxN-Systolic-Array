@@ -19,9 +19,9 @@ Here's a breakdown of the module:
   - `out`: Output signal of width `xlen` representing the final result.
 
 - Internal wires:
-  - `prod`: Wire of width `xlen` to transmit the result of the floating-point multiplication to adder.
-  - `res_i`: Wire of width `xlen` to store the intermediate result from the adder.
-  - `result`: Wire of width `xlen` to store the final result.
+  - `prod`: Wire of width `xlen` to transmit the result of the floating-point multiplication (`floating_multi`) to adder (`float_adder`).
+  - `res_i`: Wire of width `xlen` to transmit the output from adder (`float_adder`) to DFF (`d_ff`).
+  - `result`: Wire of width `xlen` to store the final result and it connects to the second input of (`float_adder`)..
 
 - Floating-Point Multiplier:
   - The module includes an instance of a floating-point multiplier (`floating_multi`) named `F1`. It takes the inputs `inp_n` and `inp_w` and produces the product `prod` as output.
