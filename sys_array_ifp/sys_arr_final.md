@@ -40,7 +40,7 @@ Verilog code for NxN systolic array can be generated using [python script](https
 
 ## Processing Element 
 
-Processing element (PE) module performs computations on two input values `inp_n` and `inp_w`. The PE module uses a floating-point multiplier (`floating_multi`) and a floating-point adder (`float_adder`) to perform the computations. The module also includes a flip-flop (`d_ff`) to give necessary (1 clock) delay.
+Processing element (PE) module performs computations on two input values `inp_n` and `inp_w`. The PE module uses a floating-point multiplier (`floating_multi`) and a floating-point adder (`float_adder`) to perform the multiply accumulate operation. The module also includes a flip-flop (`d_ff`) to give necessary (1 clock) delay.
 
 ## Module Breakdown
 
