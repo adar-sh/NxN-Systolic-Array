@@ -30,7 +30,7 @@ Systolic array module performs parallel computations using processing elements (
 Overall, this systolic array module performs parallel computations using interconnected PEs and produces a `done` signal to indicate the completion of the computation after a certain number of clock cycles.
 
 ## Testbench
-The inputs are pipelined and [testbench](https://github.com/AbJ224/LLM-acceleration-with-2.5D/tree/adarsh/rtl_designs/systolic_Array/Testbench).
+The inputs are pipelined. [Testbench](https://github.com/AbJ224/LLM-acceleration-with-2.5D/tree/adarsh/rtl_designs/systolic_Array/Testbench).
 
 ![3-s2 0-B9780127345307500088-f08-22-9780127345307](https://github.com/adar-sh/internship/assets/82313948/f7c23314-4e3a-4e84-ac61-db3c6f688282)
 ## Systolic Array for NxN Matrices
