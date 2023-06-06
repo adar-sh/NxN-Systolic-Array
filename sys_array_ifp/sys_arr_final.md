@@ -35,8 +35,8 @@ The inputs are pipelined. [Testbench](https://github.com/AbJ224/LLM-acceleration
 ![3-s2 0-B9780127345307500088-f08-22-9780127345307](https://github.com/adar-sh/internship/assets/82313948/f7c23314-4e3a-4e84-ac61-db3c6f688282)
 ## Systolic Array for NxN Matrices
 Verilog code for NxN systolic array can be generated using [python script](https://github.com/AbJ224/LLM-acceleration-with-2.5D/blob/adarsh/rtl_designs/systolic_Array/sys_arr.py)
--Matrix size and Bitwidth (precision) can be given as input.
--Here,number of instantions of PEs increases with the input matrix size.
+- Matrix size and Bitwidth (precision) can be given as input.
+- Here,number of instantions of PEs increases with the input matrix size.
 
 ## Processing Element 
 
