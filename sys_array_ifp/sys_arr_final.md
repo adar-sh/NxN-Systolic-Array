@@ -1,4 +1,4 @@
-#                                             Systolic Array
+#                                             4x4 Systolic Array
 
 Systolic array module performs parallel computations using processing elements (PEs). A systolic array is a regular grid of PEs that are interconnected to perform efficient computations. Each PE performs a specific operation and passes the intermediate results to its neighboring PEs.
 
