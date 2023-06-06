@@ -22,7 +22,7 @@ Systolic array module performs parallel computations using processing elements (
   - `result0` to `result15`: Wires to store the output results of each PE.
 
 - Processing Elements (PEs):
-  - P0 to P15: These represent the individual PEs in the systolic array. Each PE takes input signals from neighboring PEs and performs a computation using the provided inputs and clock signal. The output of each PE is connected to the input of the subsequent PE in a cascading manner.
+  - P0 to P15: These represent the individual PEs in the systolic array. Each PE takes input signals from neighboring PEs and performs a multiply and accumulate using the provided inputs. The output of each PE is connected to the input of the subsequent PE in a cascading manner.
 
 - Control Logic:
   - An `always` block is used to control the `done` signal and the `count` register based on the clock and reset signals. When the reset signal is active (`rst`), the `done` signal is set to 0 and the `count` register is reset to 0. Otherwise, on the positive edge of the clock signal (`posedge clk`), the `count` is incremented by 1 until it reaches 9. Once the count reaches 9, the `done` signal is set to 1 and the `count` is reset to 0.
@@ -31,12 +31,15 @@ Overall, this systolic array module performs parallel computations using interco
 
 ![3-s2 0-B9780127345307500088-f08-22-9780127345307](https://github.com/adar-sh/internship/assets/82313948/f7c23314-4e3a-4e84-ac61-db3c6f688282)
 
+## Systolic Array for NxN Matrices
+Verilog code for NxN systolic array can be generated using [python script](https://github.com/AbJ224/LLM-acceleration-with-2.5D/blob/adarsh/rtl_designs/systolic_Array/sys_arr.py)
+
 
 ## Processing Element 
 
 Processing element (PE) module performs computations on two input values `inp_n` and `inp_w`. The PE module uses a floating-point multiplier (`floating_multi`) and a floating-point adder (`float_adder`) to perform the computations. The module also includes a flip-flop (`d_ff`) to give necessary (1 clock) delay.
 
-Here's a breakdown of the module:
+## Module Breakdown
 
 - Parameters:
   - `xlen`: Parameter specifying the width of the data (default value is 16).
