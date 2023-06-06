@@ -17,8 +17,8 @@ Systolic array module performs parallel computations using processing elements (
   - `count`: 4-bit register used to count the number of clock cycles.
   - `inp_n0`, `inp_n1`, `inp_n2`, `inp_n3`: Wires to connect the inputs to the respective PEs.
   - `inp_w0`, `inp_w4`, `inp_w8`, `inp_w12`: Wires to connect the inputs to the respective PEs.
-  - `out_s0` to `out_s15`: Wires to connect the output of one PE to the input of the next PE.
-  - `out_e0` to `out_e15`: Wires to connect the output of one PE to the input of the next PE.
+  - `out_s0` to `out_s15`: Wires to connect the output of one PE to the input of the next PE in the south.
+  - `out_e0` to `out_e15`: Wires to connect the output of one PE to the input of the next PE in the east.
   - `result0` to `result15`: Wires to store the output results of each PE.
 
 - Processing Elements (PEs):
@@ -35,7 +35,8 @@ The inputs are pipelined. [Testbench](https://github.com/AbJ224/LLM-acceleration
 ![3-s2 0-B9780127345307500088-f08-22-9780127345307](https://github.com/adar-sh/internship/assets/82313948/f7c23314-4e3a-4e84-ac61-db3c6f688282)
 ## Systolic Array for NxN Matrices
 Verilog code for NxN systolic array can be generated using [python script](https://github.com/AbJ224/LLM-acceleration-with-2.5D/blob/adarsh/rtl_designs/systolic_Array/sys_arr.py)
-
+-Matrix size and Bitwidth (precision) can be given as input.
+-Here,number of instantions of PEs increases with the input matrix size.
 
 ## Processing Element 
 
@@ -55,7 +56,7 @@ Processing element (PE) module performs computations on two input values `inp_n`
 - Outputs:
   - `out_s`: Output register of width `xlen` representing the output towards south.
   - `out_e`: Output register of width `xlen` representing the output towards east.
-  - `out`: Output signal of width `xlen` representing the final result.
+  - `out`: Output signal of width `xlen` representing the result.
 
 - Internal wires:
   - `prod`: Wire of width `xlen` to transmit the result of the floating-point multiplication (`floating_multi`) to adder (`float_adder`).
@@ -69,7 +70,7 @@ Processing element (PE) module performs computations on two input values `inp_n`
   - The module includes an instance of a floating-point adder (`float_adder`) named `ad1`. It takes the inputs `prod` and `result` and produces the sum `res_i` as output.
 
 - Flip-Flop:
-  - The module includes an instance of a flip-flop (`d_ff`) named `d1`. It takes the clock input `clk`, reset input `rst`, and the input `res_i`. The output of the flip-flop is stored in `result`.
+  - The module includes an instance of a flip-flop (`d_ff`) named `d1` for providing a single clock cycle delay for synchronization of accumulator. It takes the clock input `clk`, reset input `rst`, and the input `res_i`. The output of the flip-flop is stored in `result`. 
 
 - Control Logic:
   - The `always` block is triggered on the positive edge of the clock signal (`posedge clk`). When the reset signal `rst` is active, the outputs `out_e` and `out_s` are set to 0. Otherwise, the outputs are updated with the values of `inp_w` and `inp_n`, respectively.
