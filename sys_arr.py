@@ -58,6 +58,7 @@ always @(posedge clk or posedge rst) begin
             count <= count + 1;
         end
     end
+end
 endmodule
 '''
 
