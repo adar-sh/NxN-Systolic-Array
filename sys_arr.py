@@ -10,7 +10,7 @@ for i in range(size):
 for i in range(size):
     sys_Arr.write("inp_n"+str(i)+",")
 sys_Arr.write(
-    "\n\toutput reg done,\n\tinput clk,rst,\n\treg ["+str(count_bit-1)+":0] count\n\t);\n")
+    "\n\toutput reg done,\n\tinput clk,rst);\n\treg ["+str(count_bit-1)+":0] count\n\t\n")
 
 for i in range(size):
     sys_Arr.write("wire ["+str(bit)+":0] inp_w"+str(i*size)+";\n")
